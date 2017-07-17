@@ -58,7 +58,7 @@ public class Main {
         }
 
         // Validate the HMAC, ensure you has exposed the rawBody, see app.js for how to do this.
-        String hash = createHmacSha1(raw_body, "a secret");
+        String hash = createHmacSha1(raw_body, ">>>YOUR SECRET<<<");
 
         if (request_hmac.compareToIgnoreCase(hash) != 0) // The request is not from Comapi or has been tampered with
         {
